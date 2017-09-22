@@ -1,4 +1,4 @@
-FROM jujujse/devbox:base
+FROM jujyjse/devbox:base
 
 RUN apt-get install -y build-essential checkinstall -y cmake pkg-config yasm gfortran git \
     && apt-get install -y libjpeg8-dev libjasper-dev libpng12-dev \
