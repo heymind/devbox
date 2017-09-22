@@ -1,4 +1,4 @@
-FROM ubuntu:17.04
+FROM ubuntu:16.04
 
 # ENV APT_MIRROR="mirrors.163.com"
 ENV LANG en_US.UTF-8  
