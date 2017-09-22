@@ -44,3 +44,5 @@ RUN mkdir /opencv/opencv/build \
     && ldconfig
 
 RUN rm -rf /opencv
+
+RUN apt install xauth xfonts-base
