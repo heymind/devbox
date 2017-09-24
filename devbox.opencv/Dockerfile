@@ -41,8 +41,7 @@ RUN mkdir /opencv/opencv/build \
     && make -j4 \
     && make install \
     && sh -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf' \
-    && ldconfig
+    && ldconfig \
+    && rm -rf /opencv
 
-RUN rm -rf /opencv
-
-RUN apt install xauth xfonts-base
+RUN apt install -y xauth xfonts-base

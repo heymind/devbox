@@ -16,7 +16,8 @@ RUN apt-get update \
 # Set the locale
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     locale-gen
- 
+    
+ RUN apt-get install -y git wget curl cmake tmux zsh openssh-server sudo
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     && apt-get install -y nodejs
@@ -29,7 +30,7 @@ RUN add-apt-repository ppa:neovim-ppa/stable \
 
 RUN pip3 install neovim
 
-RUN apt-get install -y git wget curl cmake tmux zsh openssh-server sudo
+
 
 RUN mkdir /var/run/sshd
 RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
